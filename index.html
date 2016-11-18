@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>Project</title>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  	<script>
+	$(document).ready(function() {
+	  var input = $("#test");
+
+	  $("#test").on('input', function() {
+		$('p').css("color", "black")
+		$('span').css("color", "black")
+		$('b').css("color", "black")
+		$('div').css("color", "black")
+		$(input.val()).css("color", "red")
+	  });
+	});
+	</script>	
+</head>
+<body>
+	<p class="first">&ltp class="first"&gtTEST1&lt/p&gt </p>
+	<span class="second">&ltspan class="second"&gtTEST1&lt/span&gt </span> <br>
+	<b>&ltb&gt<div style="display: inherit;">&ltdiv&gtTEST3&lt/div&gt </div>&lt/b&gt </b>
+	
+	<p>
+	<input id="test">
+	</p>
+</body>
+</html>
