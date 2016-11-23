@@ -3,22 +3,30 @@
 <head>
   <title>Project</title>
   <style>
-  p { color: black; }
-  p:hover { color: yellow; }
+  .rect { 
+	width: 50px;
+	height: 50px;
+	margin: 5px;
+	display: inline-block;
+	background-color: black;
+  }
   
-  #Some { color: blue; }
-  #Text { color: darkgray; }
-  #Num2 { color: lightblue; }
+  .yellow_rect:hover {
+	background-color: yellow;
+  }
   
-  #Some:hover, #Text:hover, #Num2:hover { color: black; }
+  .green_rect:hover {
+	background-color: green;
+  }
+  
+  .blue_rect:hover {
+	background-color: blue;
+  }
   </style>
 </head>
 <body>
-<p> Some Text1 </p>
-<p> 
-	<span id="Some">Some </span>
-	<span id="Text">Text</span>
-	<span id="Num2">Two</span>
-</p>
+<span class="yellow_rect rect"></span>
+<span class="green_rect rect"></span>
+<span class="blue_rect rect"></span>
 </body>
 </html>
