@@ -2,31 +2,37 @@
 <html>
 <head>
   <title>Project</title>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <style>
-  .rect { 
-	width: 50px;
-	height: 50px;
-	margin: 5px;
-	display: inline-block;
-	background-color: black;
-  }
-  
-  .yellow_rect:hover {
-	background-color: yellow;
-  }
-  
-  .green_rect:hover {
-	background-color: green;
-  }
-  
-  .blue_rect:hover {
-	background-color: blue;
-  }
+	.rect { 
+		width: 50px;
+		height: 50px;
+		margin: 10px;
+		display: inline-block;
+		background-color: black;
+		transition: background-color 0.7s;
+	}
+	  
+	.rect:hover {
+		background-color: blue;
+	}
+
   </style>
+  <script> 
+	$(document).ready(function() {
+		var row = 3;
+		var col = 3;
+	
+		for(var i = 0; i < row; i++) {
+			for(var j = 0; j < col; j++) {		
+				$("#container").append("<span class='rect'></span>");
+			}
+			$("<br/>").appendTo("#container");
+		}
+	});
+  </script>
 </head>
 <body>
-<span class="yellow_rect rect"></span>
-<span class="green_rect rect"></span>
-<span class="blue_rect rect"></span>
+<div id="container"></div>
 </body>
 </html>
