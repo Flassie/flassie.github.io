@@ -2,28 +2,23 @@
 <html>
 <head>
   <title>Project</title>
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-  	<script>
-	$(document).ready(function() {
-	  var input = $("#test");
-
-	  $("#test").on('input', function() {
-		$('p').css("color", "black")
-		$('span').css("color", "black")
-		$('b').css("color", "black")
-		$('h1').css("color", "black")
-		$(input.val()).css("color", "red")
-	  });
-	});
-	</script>	
+  <style>
+  p { color: black; }
+  p:hover { color: yellow; }
+  
+  #Some { color: blue; }
+  #Text { color: darkgray; }
+  #Num2 { color: lightblue; }
+  
+  #Some:hover, #Text:hover, #Num2:hover { color: black; }
+  </style>
 </head>
 <body>
-	<p class="first">&ltp class="first"&gtTEST1&lt/p&gt </p>
-	<span class="second">&ltspan class="second"&gtTEST1&lt/span&gt </span> <br>
-	<h1>&lth1&gt<b>&ltb&gtTEST3&lt/b&gt </b>&lt/h1&gt </h1>
-	
-	<p>
-	<input id="test">
-	</p>
+<p> Some Text1 </p>
+<p> 
+	<span id="Some">Some </span>
+	<span id="Text">Text</span>
+	<span id="Num2">Two</span>
+</p>
 </body>
 </html>
