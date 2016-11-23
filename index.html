@@ -28,6 +28,9 @@
 				$("#container").append("<span class='rect'></span>");
 			}
 			$("<br/>").appendTo("#container");
+			$.get("test.txt", function(data) {
+				console.log(data);
+			});
 		}
 	});
   </script>
