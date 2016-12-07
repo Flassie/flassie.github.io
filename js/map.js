@@ -6,7 +6,7 @@ $(document).ready(function() {
   
      $('#world-map').vectorMap({
 			map: 'world_mill',
-			backgroundColor: 'white',
+			backgroundColor: '#AFEEEE',
 			zoomButtons: false,
 			regionStyle: {
 				initial: {
