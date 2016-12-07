@@ -2,40 +2,39 @@
 <html>
 <head>
   <title>Project</title>
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-  <style>
-	.rect { 
-		width: 50px;
-		height: 50px;
-		margin: 10px;
-		display: inline-block;
-		background-color: black;
-		transition: background-color 0.7s;
-	}
-	  
-	.rect:hover {
-		background-color: blue;
-	}
-
-  </style>
-  <script> 
-	$(document).ready(function() {
-		var row = 3;
-		var col = 3;
-	
-		for(var i = 0; i < row; i++) {
-			for(var j = 0; j < col; j++) {		
-				$("#container").append("<span class='rect'></span>");
-			}
-			$("<br/>").appendTo("#container");
-			$.get("test.txt", function(data) {
-				console.log(data);
-			});
-		}
-	});
-  </script>
+  <link rel="stylesheet" href="css/jquery-jvectormap-2.0.3.css" type="text/css" media="screen"/>
+  <link rel="stylesheet" href="css/style.css" type="text/css"/>
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery-jvectormap-2.0.3.min.js"></script>
+  <script src="js/jquery-jvectormap-2.0.3.mill.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/box.js"></script>
 </head>
 <body>
-<div id="container"></div>
+	<div id="world-map" style="height: 98vh; width: 100%"/>
+	
+	<div id="modal-window" class="modal">
+		<div class="modal-content">
+			<div class="modal-header">
+				<span class="modal-close">×</span>
+				<h2 class="modal-title"></h2>
+			</div>
+			<div class="modal-body">
+					<div class="content">
+						<img style="float: left; padding-right: 15px; max-width: 250px; max-height: 250px; width: 250px; height: 250px;">
+						<div class="text" style="font-size: 22px">Text</div>
+					</div>
+					
+					<div style="clear:both"></div>
+					
+					<div>
+						<div class="button" id="button-prev">Previous</div>
+						<div class="button" id="button-next" style="float: right">Next</div>
+					</div>
+			</div>
+		</div>
+	</div>
+	
+  <script type="text/javascript" src="slick/slick.min.js"></script>
 </body>
 </html>
