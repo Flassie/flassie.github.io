@@ -32,9 +32,11 @@
 		<div>Background: <input class="jscolor bckg" onChange="onColorChanged('bckg', this.jscolor)" value="151515"></div>
 		<br>
 		<div>Search background: <input class="jscolor searchBckg" onChange="onColorChanged('searchBckg', this.jscolor)" value="323131"></div>
+		<div>Search text color: <input class="jscolor searchTxt" onChange="onColorChanged('searchTxt', this.jscolor)" value="E0E0E0"></div>
 		<div>Search border: <input class="jscolor searchBorder" onChange="onColorChanged('searchBorder', this.jscolor)"  value="5D5D5D"></div>
 		<br>
 		<div>Search button background: <input class="jscolor btnBckg" onChange="onColorChanged('btnBckg', this.jscolor)"  value="4D4949"></div>
+		<div>Search button text color: <input class="jscolor btnTxt" onChange="onColorChanged('btnTxt', this.jscolor)"  value="E0E0E0"></div>
 		<div>Search button background when hovered: <input class="jscolor btnBckgHovered" onChange="onColorChanged('btnBckgHovered', this.jscolor)"  value="3F3C3C"></div>
 		<div>Search button background when pressed: <input class="jscolor btnBckgPressed" onChange="onColorChanged('btnBckgPressed', this.jscolor)"  value="302E2E"></div>
 		<br>
@@ -70,6 +72,13 @@
 			if(target == "searchBorder") {
 				$(".search-box input").css("border-color", '#' + color);
 				$(".search-box button").css("border-color", '#' + color);
+			}
+			if(target == "searchTxt") {
+				$(".search-box input").css("color", '#' + color);
+			}
+			
+			if(target == "btnTxt") {
+				 $(".search-box button").css("color", '#' + color);
 			}
 			
 			if(target == "btnBckg") $(".search-box button").css("background-color", '#' + color);
