@@ -6,23 +6,16 @@ $(document).ready(function() {
   
      $('#world-map').vectorMap({
 			map: 'world_mill',
-			backgroundColor: '#AFEEEE',
+			backgroundColor: 'transparent',
 			zoomButtons: false,
+		 
 			regionStyle: {
 				initial: {
-					fill: 'darkgray'
+					fill: '#F1F1F1'
 				},
 				hover: {
 					"fill-opacity": 1.0
 				}
-			},
-			
-			onRegionOver: function(e, code) {
-				$("[data-code='" + code + "']").css("fill-opacity", "0.5");
-			},
-			onRegionOut: function(e, code) {
-				document.body.style.cursor = 'default';
-				$("[data-code='" + code + "']").css("fill-opacity", "1.0");
 			}
 		});
 });

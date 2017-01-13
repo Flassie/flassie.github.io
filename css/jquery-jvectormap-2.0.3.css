@@ -11,7 +11,7 @@ svg {
 }
 
 .jvectormap-tip {
-    position: absolute;
+    position: absolute;		
     display: none;
     border: solid 1px #CDCDCD;
     border-radius: 3px;

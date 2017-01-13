@@ -1,17 +1,111 @@
-﻿<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-  <title>Project</title>
-  <link rel="stylesheet" href="css/jquery-jvectormap-2.0.3.css" type="text/css" media="screen"/>
-  <link rel="stylesheet" href="css/style.css" type="text/css"/>
-  <script src="js/jquery.js"></script>
-  <script src="js/jquery-jvectormap-2.0.3.min.js"></script>
-  <script src="js/jquery-jvectormap-2.0.3.mill.js"></script>
-  <script src="js/map.js"></script>
-  <script src="js/box.js"></script>
+	<meta charset="utf-8">
+	
+	<title>Proj</title>
+	
+	<link rel="stylesheet" href="css/jquery-jvectormap-2.0.3.css" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="css/map_style.css" type="text/css"/>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery-jvectormap-2.0.3.min.js"></script>
+	<script src="js/jquery-jvectormap-2.0.3.mill.js"></script>
+	<script src="js/map.js"></script>
+	<script src="js/jscolor.min.js"></script>
 </head>
+
 <body>
-	<div id="world-map" style="height: 98vh; width: 100%"/>
-	<script type="text/javascript" src="slick/slick.min.js"></script>
+	<header>
+		<div class="search-box">
+			<input type="search" placeholder="Author, book, keywords etc.">
+			<button>Search</button>
+		</div>
+	</header>
+
+	<div id="map-container">
+		<div id="world-map"></div>
+	</div>
+	
+	<div style="color: white; background-color: black;">
+		<div>Background: <input class="jscolor bckg" onChange="onColorChanged('bckg', this.jscolor)" value="151515"></div>
+		<br>
+		<div>Search background: <input class="jscolor searchBckg" onChange="onColorChanged('searchBckg', this.jscolor)" value="323131"></div>
+		<div>Search border: <input class="jscolor searchBorder" onChange="onColorChanged('searchBorder', this.jscolor)"  value="5D5D5D"></div>
+		<br>
+		<div>Search button background: <input class="jscolor btnBckg" onChange="onColorChanged('btnBckg', this.jscolor)"  value="4D4949"></div>
+		<div>Search button background when hovered: <input class="jscolor btnBckgHovered" onChange="onColorChanged('btnBckgHovered', this.jscolor)"  value="3F3C3C"></div>
+		<div>Search button background when pressed: <input class="jscolor btnBckgPressed" onChange="onColorChanged('btnBckgPressed', this.jscolor)"  value="302E2E"></div>
+		<br>
+		<div>Countries:</div>
+		<div>All: <input class="jscolor countriesAll" onChange="onColorChanged('countriesAll', this.jscolor)"  value="F1F1F1"></div>
+		<div>Stroke: <input class="jscolor countriesStroke" onChange="onColorChanged('countriesStroke', this.jscolor)"  value="000000"></div>
+	</div>
+	
+	<script>
+		var hexDigits = new Array
+        ("0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"); 
+
+		//Function to convert hex format to a rgb color
+		function rgb2hex(rgb) {
+		 rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+		 return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
+		}
+
+		function hex(x) {
+		  return isNaN(x) ? "00" : hexDigits[(x - x % 16) / 16] + hexDigits[x % 16];
+		 }
+		
+		function onColorChanged(target, color) {
+			var search = $(".search-box input");
+			var button = $(".search-box button");
+			var region = $(".jvectormap-region");
+			
+			if(target == "bckg") {
+				$("body").css("background", '#' + color);
+			}
+			
+			if(target == "searchBckg") $(".search-box input").css("background-color", '#' + color);
+			if(target == "searchBorder") {
+				$(".search-box input").css("border-color", '#' + color);
+				$(".search-box button").css("border-color", '#' + color);
+			}
+			
+			if(target == "btnBckg") $(".search-box button").css("background-color", '#' + color);
+			if(target == "btnBckgHovered") {
+				var notHovered = $(".search-box button").css("background-color");
+				$(".search-box button").on("mouseover", function() {
+					$(".search-box button").css("background-color", '#' + color);
+				});
+				$(".search-box button").on("mouseout", function() {
+					$(".search-box button").css("background-color", notHovered);
+				});	
+			}
+			if(target == "btnBckgPressed") {
+				var notPressed = $(".search-box button").css("background-color");
+				$(".search-box button").on("mousedown", function() {
+					$(".search-box button").css("background-color", '#' + color);
+				});
+				$(".search-box button").on("mouseup", function() {
+					$(".search-box button").css("background-color", notPressed);
+				});	
+			}
+			
+			if(target == "countriesAll") {
+				$(".jvectormap-region").css("fill", "#" + color);
+			}
+			
+			if(target == "countriesStroke") {
+				$(".jvectormap-region").attr("stroke", "#" + color);
+				$(".jvectormap-region").on("mouseover", function() {
+					$(".jvectormap-region").css("stroke", "#" + color);
+				});
+				$(".jvectormap-region").on("mouseout", function() {
+					$(".jvectormap-region").css("stroke", "#" + color);
+				});
+			}
+		}
+	</script>
 </body>
 </html>
