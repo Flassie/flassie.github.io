@@ -3,7 +3,7 @@ $(document).ready(function() {
 	
 	$.ajaxSetup( { "async": false } );
 
-	fillMap("Elizabeth Gilbert", "Eat Love Pray");
+	fillMap("Elizabeth Gilbert", "Eat Love Pray");	
 });
 
 function replaceAll(str, find, replace) {
@@ -16,9 +16,6 @@ function getAuthors() {
 	
 	var data = $.getJSON("./authors/data.json");
 	var authors = data.responseJSON;
-	for(var i = 0; i < authors.length; i++) {
-		authors[i] = authors[i].toLowerCase();
-	}
 	
 	return authors;
 }
