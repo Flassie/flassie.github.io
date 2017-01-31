@@ -22,7 +22,7 @@ function getAuthors() {
 
 function getAuthorSources(author) {
 	"use strict";
-	author = author.replace(' ', '').toLowerCase();
+	author = author.replace(' ', '');
 	var authors = getAuthors();
 	if(authors.indexOf(author) === -1) {
 		return undefined;
@@ -40,8 +40,10 @@ function getSource(author, source) {
 
 	var folder = source;
 	folder = replaceAll(folder, ' ', '');
-	
 	author = replaceAll(author, ' ', '');
+	
+	console.log(author);
+	console.log(folder);
 	
 	var result = getAuthorSources(author);
 	for(var i = 0; i < result.length; i++) {
