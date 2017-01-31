@@ -1,0 +1,6 @@
+[
+	{"source": "America", "count": 1, "n": 1, "fillCountry": "US", "fillColor": "red", "textColor": "white" },
+	{"source": "Italy", "count": 1, "n": 2, "fillCountry": "IT", "fillColor": "green", "textColor": "white" },
+	{"source": "Indonesia", "count": 1, "n": 4, "fillCountry": "ID", "fillColor": "blue", "textColor": "white" },
+	{"source": "India", "count": 1, "n": 3, "fillCountry": "IN","fillColor": "steelblue", "textColor": "white" }
+]

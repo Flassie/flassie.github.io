@@ -1,68 +1,107 @@
 body {
-	background: #151515;
-	margin: 0;
-	
-	display: flex;
-	flex-direction: column;
-	flex: auto;
-	
-	min-height: 100%;
+	background-color: #363636;
 }
 
-header {
-	width: 100%;
-	min-width: 430px;
-	max-width: 960px;
-	margin: 25px auto;
-	display: flex;
-	flex-wrap: wrap;
+.book-info {
+	margin-top: 20px;
+	border-top: 1px solid black;
+	height: 300px;
 }
 
-
-.search-box, .search-box input {
-	width: 100%;
-	margin: 0 auto;
+span {
+	color: white;
 }
 
-.search-box {
-	padding: 0 15px;
-	display: flex;
+.main-block {
+	margin-top: 20px;
 }
 
-.search-box input {
+.info-title {
+	background-color: #2B2B2B;
+}
+
+.info-title > button {
+	background-color: transparent;
+	color: white;
 	outline: none;
-	height: 20px;
-	border-radius: 10px 0 0 10px;
-	padding: 20px;
-	background: #323131;
 	
-	font-size: 11pt;
-	
-	color: #E0E0E0;
-	border: 2px solid #5D5D5D;
-	border-right: none;
-	
-	transition: all .2s;
 }
 
-.search-box button {
-	height: 44px;
-	border-radius: 0 10px 10px 0;
-	border: 2px solid #5D5D5D;
-	background: #4D4949;
-	transition: all .2s;
-	padding: 0 15px 0 15px;
-	color: #E0E0E0;
+.info-title > button:hover:focus,
+.info-title > button:hover,
+.info-title > button:active {
+	background-color: transparent;
+	color: red;
+}
+
+.info-title > button:active:hover {
+	color: red;
+	transform: translateY(1px);
+}
+
+.info-title > button:focus {
+	color: white;
+}
+
+.btn:focus, .btn:active:focus, .btn.active:focus {
+	outline:none;
+	box-shadow:none;
+}
+
+.main-block {
+	margin-bottom: 0;
+}
+
+.info-block {
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 15px;
+	padding-bottom: 40px;
+	background-color: #2F2F2F;
+	color: white;
+}
+
+.legend li {
+	padding: 5px 0px;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+
+.legend button {
+	background-color: inherit;
+	border: none;
 	outline: none;
-	text-transform: uppercase;
-	font-weight: bold;
+	padding: 0 10px;
 }
 
-.search-box button:hover {
-	cursor: pointer;
-	background: #3F3C3C;
+footer {
+	background-color: #2C2A2A;
 }
 
-.search-box button:hover:active {
-	background: #302E2E;
+footer > .container {
+	padding: 35px 15px;
+	height: 75px;
+}
+
+footer a,
+footer a:visited {
+	color: white;
+}
+
+address  { 
+	color: white;
+}
+
+address .contact-data {
+	color: #959595;
+	padding-left: 15px;
+}
+
+address a:visited,
+address a {
+	color: #959595;
+}
+address a:visited:hover,
+address a:hover {
+	color: #C2C2C2;
 }
