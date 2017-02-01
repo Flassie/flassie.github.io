@@ -1,0 +1,22 @@
+[
+	{
+		"source": "Russia1", 
+		"name": "Russia",
+		"title": "1. Russia",
+		"count": 1, 
+		"n": 1, 
+		"fillCountry": "RU", 
+		"fillColor": "steelblue", 
+		"textColor": "white"
+	},
+	{
+		"source": "Russia2",  
+		"name": "Russia",
+		"title": "2. Russia",
+		"count": 1, 
+		"n": 2, 
+		"fillCountry": "RU", 
+		"fillColor": "steelblue", 
+		"textColor": "white"
+	}
+]

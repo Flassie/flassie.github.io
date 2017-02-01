@@ -26,11 +26,12 @@
 			
 			 onRegionTipShow: function(e, el, code) {
 				 var prevent = true;
+				 if(lastSrc === undefined) { return undefined; }
 				 for(var i = 0; i < lastSrc.length; i++) {
 					 var reg = lastSrc[i];
 					 
 					 if(reg.fillCountry === code) {
-						 el.html(reg.n + ". " + reg.source);
+						 el.html(reg.name);
 						 prevent = false;
 					 } 
 				 }

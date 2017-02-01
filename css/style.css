@@ -2,6 +2,46 @@ body {
 	background-color: #363636;
 }
 
+.team-block .mate-info {
+	border: 2px solid grey;
+	border-radius: 6px;
+	padding: 5px;
+	display: inline-block;
+	
+	margin: 10px;
+	text-align: left;
+}
+
+.mate-info .name {
+	font-weight: bold;
+}
+
+.mate-info .role {
+	font-size: 10pt;
+	padding-left: 10px;
+	color: #D8D8D8;
+}
+
+.mate-info .contacts {
+	margin-top: 5px;
+	padding-left: 5px;
+}
+
+.team-block {
+	padding: 5px;
+}
+
+.used {
+	color: white;
+}
+
+
+#source-name {
+	color: white;
+	font-size: 16pt;
+	padding-bottom: 15px;
+}
+
 .book-info {
 	margin-top: 20px;
 	border-top: 1px solid black;
@@ -88,20 +128,20 @@ footer a:visited {
 	color: white;
 }
 
-address  { 
+.mate-info  { 
 	color: white;
 }
 
-address .contact-data {
+.mate-info .contact {
 	color: #959595;
 	padding-left: 15px;
 }
 
-address a:visited,
-address a {
+.mate-info a:visited,
+.mate-info a {
 	color: #959595;
 }
-address a:visited:hover,
-address a:hover {
+.mate-info a:visited:hover,
+.mate-info a:hover {
 	color: #C2C2C2;
 }

@@ -1,3 +1,14 @@
-[
-	"ElizabethGilbert"
+﻿[
+	{
+		"folder": "ElizabethGilbert",
+		"rus": "Элизабет Гилберт",
+		"eng": "Elizabeth Gilbert",
+		"id": 1
+	},
+	{
+		"folder": "Bikov",
+		"rus": "Василий Быков",
+		"eng": "Vasil Bykaŭ",
+		"id": 2
+	}
 ]
